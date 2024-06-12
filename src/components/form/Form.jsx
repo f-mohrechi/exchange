@@ -1,5 +1,6 @@
 import React from "react";
 import TextField from "../textField/TextField";
+import PrimaryButton from "../buttons/PrimaryButton";
 
 export default function Form() {
   return (
@@ -8,6 +9,10 @@ export default function Form() {
         <p className="text-2xl font-semibold">Buy</p>
       </div>
       <TextField />
+
+      <div className="mt-8">
+        <PrimaryButton text={"Compare"} />
+      </div>
     </div>
   );
 }
