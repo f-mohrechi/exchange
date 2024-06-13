@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TextField() {
+export default function TextField({ onChange }) {
   return (
     <div>
       <div className="mb-3">
@@ -12,6 +12,7 @@ export default function TextField() {
           type="text"
           className="outline-none bg-transparent w-full text-secondary-100"
           placeholder="100"
+          onChange={onChange}
         />
         <p>USDT</p>
       </div>

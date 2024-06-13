@@ -10,9 +10,10 @@ export default function List({ data }) {
         <tbody>
           {data.map((item, index) => (
             <ListItem
-              key={data.id}
+              key={item.name}
+              index={index}
               data={item}
-              isLast={index === data.length - 1}
+              isLast={data.indexOf(item) === data.length - 1}
             />
           ))}
         </tbody>
