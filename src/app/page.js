@@ -1,32 +1,9 @@
 "use client";
-import CoinBox from "@/components/coinBox/CoinBox";
 import List from "@/components/exchhange/List";
 import Form from "@/components/form/Form";
 import { useState } from "react";
 
 export default function Home() {
-  const [coins, setCoins] = useState([
-    {
-      name: "Bitcoin",
-      id: 1,
-      img: "/icons/bitcoin.svg",
-    },
-    {
-      name: "Bitcoin",
-      id: 2,
-      img: "/icons/bitcoin.svg",
-    },
-    {
-      name: "Bitcoin",
-      id: 3,
-      img: "/icons/bitcoin.svg",
-    },
-    {
-      name: "Bitcoin",
-      id: 4,
-      img: "/icons/bitcoin.svg",
-    },
-  ]);
   const [exchanges, setExchanges] = useState([
     {
       name: "Coinbase",
