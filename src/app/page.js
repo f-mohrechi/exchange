@@ -67,17 +67,9 @@ export default function Home() {
 
   return (
     <>
-      <div className="px-72 py-12">
-        <div className="flex justify-center w-full">
-          <div className="grid grid-cols-4 gap-10">
-            {coins.map((coin) => {
-              return <CoinBox data={coin} key={coin.id} />;
-            })}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-x-10 mt-12">
-          <div>
+      <div className="px-5 sm:px-12 md:px-20 xl:px-32 2xl:px-40 py-5 md:py-12">
+        <div className="lg:grid grid-cols-4 gap-x-10">
+          <div className="mb-5 md:mb-16 lg:mb-0">
             <Form />
           </div>
 

@@ -4,17 +4,19 @@ import ListHeader from "./ListHeader";
 
 export default function List({ data }) {
   return (
-    <div>
-      <div className="mb-3">
+    <div className="overflow-x-auto">
+      <table className="min-w-full bg-primary-300 rounded-xl">
         <ListHeader />
-      </div>
-      {data.map((item) => {
-        return (
-          <div key={item.id} className="mb-9">
-            <ListItem data={item} />
-          </div>
-        );
-      })}
+        <tbody>
+          {data.map((item, index) => (
+            <ListItem
+              key={data.id}
+              data={item}
+              isLast={index === data.length - 1}
+            />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

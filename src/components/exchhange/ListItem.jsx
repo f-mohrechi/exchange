@@ -2,28 +2,25 @@ import Image from "next/image";
 import React from "react";
 import PrimaryButton from "../buttons/PrimaryButton";
 
-export default function ListItem({ data }) {
+export default function ListItem({ data, isLast }) {
   return (
-    <div className="bg-primary-300 px-5 py-3 rounded-xl shadow-main">
-      <div className="grid grid-cols-8 gap-x-10 items-center">
-        <div>
-          <p>{data.id}</p>
-        </div>
-
-        <div className="flex items-center gap-x-5 col-span-2">
+    <tr
+      className={`text-xs sm:text-sm md:text-base border-b ${
+        !isLast ? "border-b-secondary-300" : "border-b-transparent"
+      }`}
+    >
+      <td className="px-4 py-2">{data.id}</td>
+      <td className="px-4 py-2">
+        <span className="flex items-center gap-x-3">
           <Image src={data.img} alt={data.name} width={30} height={30} />
-          <p>{data.name}</p>
-        </div>
-
-        <div className="col-span-2">{data.price}</div>
-        <div className="col-span-2">{data.amount}</div>
-
-        <div className="flex justify-end">
-          <div className="w-max">
-            <PrimaryButton text={"Buy"} />
-          </div>
-        </div>
-      </div>
-    </div>
+          {data.name}
+        </span>
+      </td>
+      <td className="px-4 py-2">{data.price}</td>
+      <td className="px-4 py-2">{data.amount}</td>
+      <td className="px-4 py-2">
+        <PrimaryButton text={"Buy"} Class={"text-xs md:text-base"} />
+      </td>
+    </tr>
   );
 }

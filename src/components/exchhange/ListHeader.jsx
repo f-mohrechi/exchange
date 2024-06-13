@@ -2,28 +2,16 @@ import React from "react";
 
 export default function ListHeader() {
   return (
-    <div className="px-5 py-3">
-      <div className="grid grid-cols-7 gap-x-10 items-center">
-        <div>
-          <span>#</span>
-        </div>
-
-        <div className="col-span-2">
-          <p>Name</p>
-        </div>
-
-        <div className="col-span-2">
-          <p>Price</p>
-        </div>
-
-        <div className="col-span-2">
-          <p>Amount</p>
-        </div>
-
-        <div className="flex justify-end">
-          <div className="w-max"></div>
-        </div>
-      </div>
-    </div>
+    <thead>
+      <tr className="text-xs sm:text-sm md:text-base border-b border-b-secondary-200">
+        <th className="px-2 sm:px-4 py-2 text-start">#</th>
+        <th className="px-2 sm:px-4 py-2 text-start">Name</th>
+        <th className="px-2 sm:px-4 py-2 text-start">Price</th>
+        <th className="px-2 sm:px-4 py-2 text-start">Amount</th>
+        <th className="px-2 sm:px-4 py-2">
+          <span className="sr-only">continue</span>
+        </th>
+      </tr>
+    </thead>
   );
 }
